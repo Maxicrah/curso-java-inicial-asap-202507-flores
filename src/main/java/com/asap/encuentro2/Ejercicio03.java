@@ -1,5 +1,7 @@
 package com.asap.encuentro2;
 
+import com.asap.util.Helper;
+
 import java.util.Scanner;
 
 public class Ejercicio03 {
@@ -10,23 +12,14 @@ public class Ejercicio03 {
 //        Por ejemplo, si se ingresa el numero 3601 el programa debera mostrar:
 //        "La suma de sus cifras es: 10".
 
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Ingrese un numero entero positivo: ");
-        int number = sc.nextInt();
+        int number = Helper.readInteger("Ingrese un numero entero positivo ");
         int result = 0;
-        if (isPositiveNumber(number)){
-            while (number > 0) {
-                result+= number % 10; // 1 % 10 = 1
-                number /= 10;
-            }
-        }else{
-            System.out.println("el numero es negativo");
+        while (number > 0) {
+            result+= number % 10; // 1 % 10 = 1
+            number /= 10;
         }
-
 
         System.out.println("La suma de sus cifras es: " + result);
     }
-    public static boolean isPositiveNumber(int number){
-        return number > 0;
-    }
+
 }
