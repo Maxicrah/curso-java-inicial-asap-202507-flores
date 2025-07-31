@@ -26,7 +26,7 @@ public class Ejercicio02 {
         int year = sc.nextInt();
         int luckyNumber = 0;
         int dateOfBirth = day + month + year;
-
+    //descomponemos el numero en cifras
         while (dateOfBirth > 0) {
             luckyNumber = luckyNumber + dateOfBirth % 10; // 1 % 10 = 1
             dateOfBirth = dateOfBirth / 10;
