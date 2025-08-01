@@ -45,7 +45,7 @@ public class Helper {
     }
     //valida numero que sea positivo
     public static boolean validateInteger(int number){
-        return number >= 0;
+        return number >= 1;
     }
     //valida numero double que sea positivo
     public static boolean validateDouble(double number){
