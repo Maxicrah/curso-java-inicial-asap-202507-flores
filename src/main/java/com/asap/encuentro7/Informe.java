@@ -64,11 +64,11 @@ public class Informe {
         int cantidad = 0;
 
         for (Examen examen : examenes) {
-            if (examen instanceof ExamenDeAuto auto) {
-                if (auto.aprobado()) {
+            if (examen instanceof ExamenDeAuto auto && auto.aprobado()) {
+
                     sumaTiempos += auto.getCircuito().getSegundos();
                     cantidad++;
-                }
+
             }
         }
 

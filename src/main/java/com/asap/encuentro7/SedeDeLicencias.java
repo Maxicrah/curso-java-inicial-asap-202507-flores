@@ -19,8 +19,8 @@ public class SedeDeLicencias {
         double promedioTiempoAprobadosAuto = informe.obtenerPromedioTiempoExamenAprobadoAutos();
 
         Map<String, Double> resultado = new HashMap<>();
-        resultado.put("porcReprobados", porcentajeReprobados);
         resultado.put("promTiempoAutosAprobados", promedioTiempoAprobadosAuto);
+        resultado.put("porcReprobados", porcentajeReprobados);
 
         Gson gson = new Gson();
         return gson.toJson(resultado);
